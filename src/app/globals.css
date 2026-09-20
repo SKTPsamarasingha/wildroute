@@ -1,0 +1,219 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-earth: #faf8f5;
+    --surface-card: #ffffff;
+    --surface-muted: #f3efea;
+    --surface-accent: #eae3da;
+    --border-light: #e5dfd5;
+    --border-hover: #d0c6b8;
+
+    --forest-green: #23382b;
+    --forest-hover: #192b20;
+    --sage-green: #6e8071;
+    --terracotta: #c86d51;
+    --terracotta-hover: #b35b40;
+
+    --text-primary: #1c2826;
+    --text-muted: #5c6b66;
+    --text-light: #8e9b96;
+
+    --radius-organic: 1rem;
+    --shadow-soft: 0 10px 30px -10px rgba(35, 56, 43, 0.06);
+    --shadow-hover: 0 20px 40px -15px rgba(35, 56, 43, 0.12);
+  }
+
+  body {
+    background-color: var(--bg-earth);
+    color: var(--text-primary);
+    font-family:
+      var(--font-geist-sans),
+      system-ui,
+      -apple-system,
+      sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Utilities for Organic Light Minimalist Theme */
+.bg-earth {
+  background-color: var(--bg-earth);
+}
+.bg-surface {
+  background-color: var(--surface-card);
+}
+.bg-surface-muted {
+  background-color: var(--surface-muted);
+}
+.bg-forest {
+  background-color: var(--forest-green);
+}
+.bg-forest-hover:hover {
+  background-color: var(--forest-hover);
+}
+.bg-terracotta {
+  background-color: var(--terracotta);
+}
+.bg-terracotta-hover:hover {
+  background-color: var(--terracotta-hover);
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+.text-muted-earth {
+  color: var(--text-muted);
+}
+.text-forest {
+  color: var(--forest-green);
+}
+.text-terracotta {
+  color: var(--terracotta);
+}
+.text-sage {
+  color: var(--sage-green);
+}
+
+.border-earth {
+  border-color: var(--border-light);
+}
+.border-earth-hover:hover {
+  border-color: var(--border-hover);
+}
+
+.shadow-earth {
+  box-shadow: var(--shadow-soft);
+}
+.shadow-earth-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.shadow-earth-hover:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+
+.glass-header {
+  background: rgba(250, 248, 245, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(229, 223, 213, 0.6);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-light);
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #faf8f5;
+}
+::-webkit-scrollbar-thumb {
+  background: #d5cdc0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b8ac9d;
+}
+
+/* Animation structural layers stay layout-safe and independently targetable. */
+.page-wrapper {
+  contain: layout;
+}
+
+.link-text-wrapper {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+.link-text-inner {
+  display: inline-block;
+  transition: transform 0.45s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.nav-link:hover .link-text-inner {
+  transform: translateY(-2px);
+}
+
+.hero-title-line {
+  display: block;
+  overflow: hidden;
+  contain: paint;
+}
+.hero-serif-slide {
+  display: block;
+  will-change: transform;
+}
+
+.hero-cinematic-mask {
+  overflow: hidden;
+  contain: paint;
+}
+.hero-cinematic-img {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.stat-counter-isolated {
+  font-variant-numeric: tabular-nums;
+  display: inline-block;
+  min-width: 4ch;
+}
+
+.gear-panel-isolated .card-meta,
+.gear-panel-isolated .card-price {
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+.gear-panel-isolated:hover .card-meta,
+.gear-panel-isolated:hover .card-price {
+  opacity: 0.72;
+}
+.card-underline {
+  display: block;
+  height: 1px;
+  width: 0;
+  background: currentColor;
+  transition: width 0.45s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.gear-panel-isolated:hover .card-underline,
+.tour-card-discrete:hover .card-underline {
+  width: 100%;
+}
+
+.form-field {
+  position: relative;
+  isolation: isolate;
+  transition:
+    border-color 0.4s cubic-bezier(0.76, 0, 0.24, 1),
+    box-shadow 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.form-field:focus,
+.form-field:focus-visible {
+  outline: none;
+  border-color: #f3ce32;
+  box-shadow:
+    inset 0 0 0 1px #f3ce32,
+    inset 0 0 48px rgba(243, 206, 50, 0.2);
+}
+
+.gear-cta-magnetic,
+.motion-magnetic {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-serif-slide,
+  .hero-cinematic-img,
+  .gear-cta-magnetic,
+  .motion-magnetic {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
