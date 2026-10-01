@@ -1,19 +1,19 @@
 "use client";
 
-import React from "react";
-import Image from "next/image";
+import React, { useState } from "react";
 import { ArrowDownRight } from "lucide-react";
 
 export const Footer: React.FC = () => {
+  const [subscriptionMessage, setSubscriptionMessage] = useState("");
+
   return (
     <footer className="bg-[#EAEBE3] text-[#0C1A14] pt-32 pb-16 px-6 md:px-12 relative overflow-hidden flex flex-col items-center">
       <div className="w-full relative flex justify-center mb-24">
-        <h2 className="font-serif font-black text-[8rem] md:text-[15rem] lg:text-[22rem] leading-none tracking-tighter text-center">
+        <h2 className="font-serif font-black text-5xl sm:text-8xl md:text-[10rem] lg:text-[14rem] 2xl:text-[18rem] leading-none tracking-tighter text-center">
           <span className="hero-title-line">
             <span className="hero-serif-slide">Wildroute</span>
           </span>
         </h2>
-        
       </div>
 
       <div className="w-full h-px bg-[#0C1A14]/20 mb-12" />
@@ -38,21 +38,37 @@ export const Footer: React.FC = () => {
           <p className="text-[#F3CE32] text-xs font-bold uppercase tracking-widest mb-4">
             Newsletter
           </p>
-          <div className="flex border-b border-[#0C1A14]/30 pb-2 form-field">
-            <input
-              type="email"
-              placeholder="Email address..."
-              className="form-field bg-transparent w-full outline-none text-sm placeholder:text-[#0C1A14]/50 border-0"
-            />
-            <button
-              type="button"
-              className="motion-magnetic"
-              data-magnetic-strength="0.2"
-              aria-label="Subscribe"
-            >
-              <ArrowDownRight className="w-4 h-4" />
-            </button>
-          </div>
+          <form
+            onSubmit={(event) => {
+              event.preventDefault();
+              setSubscriptionMessage(
+                "Newsletter sign-ups are unavailable right now. Please try again later.",
+              );
+            }}
+          >
+            <div className="flex border-b border-[#0C1A14]/30 pb-2 form-field">
+              <input
+                type="email"
+                required
+                placeholder="Email address..."
+                aria-label="Newsletter email address"
+                className="form-field bg-transparent w-full outline-none text-sm placeholder:text-[#0C1A14]/50 border-0"
+              />
+              <button
+                type="submit"
+                className="motion-magnetic"
+                data-magnetic-strength="0.2"
+                aria-label="Subscribe"
+              >
+                <ArrowDownRight className="w-4 h-4" />
+              </button>
+            </div>
+            {subscriptionMessage && (
+              <p role="alert" className="mt-3 text-xs leading-relaxed">
+                {subscriptionMessage}
+              </p>
+            )}
+          </form>
         </div>
       </div>
     </footer>

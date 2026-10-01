@@ -1,0 +1,9 @@
+WildRoute Adventures QA Report Version 1.0
+Category: Functional/validation failures (explicitly marked Fail)
+
+WR-FOOT-016 - Newsletter submission feedback
+Expected: Submitting a valid email shows a success confirmation, or an appropriate error if submission fails.
+Actual: No success message, error message, or other visible result is displayed after submission.
+Status: Not yet fixed; UI failures are being addressed first.
+
+Note: Report rows marked Pass, or whose behavior could not be confirmed, are not listed as explicit failures here.

@@ -1,0 +1,22 @@
+WildRoute Adventures QA Report Version 1.0
+Category: UI failures (explicitly marked Fail)
+
+WR-HP-031 - Expedition detail header spacing
+Expected: The WildRoute logo and Back to Expeditions link have proper spacing and do not overlap.
+Actual: The logo and link appear too close together, causing a layout/spacing issue.
+Status: Fixing.
+
+WR-HP-032 - Duplicate expedition detail footer
+Expected: The footer is displayed once.
+Actual: Footer content is displayed twice on the same page.
+Status: Fixing.
+
+WR-FOOT-009 - Footer wordmark clipping
+Expected: WildRoute text is fully visible in the footer.
+Actual: WildRoute text appears partially cropped/cut off.
+Status: Fixing.
+
+WR-GEAR-001 - Navigation text clipping
+Expected: Home, Gear, Experiences, and Community are fully visible without cropping or overlap.
+Actual: Navigation menu text is cropped and does not display correctly.
+Status: Fixing.

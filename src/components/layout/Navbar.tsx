@@ -35,7 +35,7 @@ export const Navbar: React.FC = () => {
             <NavLinkText>WildRoute</NavLinkText>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8 text-[11px] uppercase tracking-widest font-semibold">
+          <nav className="hidden lg:flex items-center gap-8 text-[11px] uppercase tracking-widest font-semibold">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -144,7 +144,7 @@ export const Navbar: React.FC = () => {
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="motion-magnetic md:hidden p-2 text-white hover:bg-white/5"
+              className="motion-magnetic lg:hidden p-2 text-white hover:bg-white/5"
               data-magnetic-strength="0.16"
             >
               {isMobileMenuOpen ? (

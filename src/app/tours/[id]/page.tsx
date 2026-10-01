@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useEffect, useState, use } from "react";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import { Tour } from "@/types/tours";
 import { getTourById } from "@/services/tourService";
 import { createTourBooking } from "@/services/orderService";
@@ -65,9 +63,7 @@ export default function TourDetailPage({
   if (loading) {
     return (
       <div className="min-h-screen flex flex-col bg-[#0C1A14] text-[#F8F9F5]">
-        <Navbar />
         <LoadingSpinner label="Loading tour expedition details..." fullPage />
-        <Footer />
       </div>
     );
   }
@@ -75,7 +71,6 @@ export default function TourDetailPage({
   if (!tour) {
     return (
       <div className="min-h-screen flex flex-col bg-[#0C1A14] text-[#F8F9F5]">
-        <Navbar />
         <div className="flex-1 max-w-7xl mx-auto px-4 py-20 text-center">
           <h2 className="text-3xl font-serif font-black text-white uppercase tracking-widest">
             Tour Expedition Not Found
@@ -87,7 +82,6 @@ export default function TourDetailPage({
             ← Back to Expeditions
           </Link>
         </div>
-        <Footer />
       </div>
     );
   }
@@ -131,9 +125,7 @@ export default function TourDetailPage({
 
   return (
     <div className="min-h-screen flex flex-col bg-[#0C1A14] text-[#F8F9F5]">
-      <Navbar />
-
-      <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+      <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12 w-full">
         <Link
           href="/tours"
           className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-white/70 hover:text-[#F3CE32] mb-12 transition"
@@ -461,8 +453,6 @@ export default function TourDetailPage({
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }
