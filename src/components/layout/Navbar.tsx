@@ -115,14 +115,15 @@ export const Navbar: React.FC = () => {
                 )}
               </div>
             ) : (
-              <button
+              <Link
+                href="/admin"
                 onClick={() => setIsAuthModalOpen(true)}
                 className="motion-magnetic hidden sm:flex items-center gap-1.5 px-3 py-1.5 border border-white/20 hover:bg-white/5 text-xs font-bold uppercase tracking-widest transition"
                 data-magnetic-strength="0.2"
               >
                 <User className="w-3.5 h-3.5" />
                 Sign In
-              </button>
+              </Link>
             )}
 
             <button

@@ -115,11 +115,9 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
 
         {/* 1-Click Demo Accounts Bar */}
         <div className="mb-4 p-3 bg-[#FAF8F5] border border-[#E5DFD5] rounded-2xl space-y-2">
-          <span className="text-[10px] font-bold text-[#1C2826] uppercase tracking-wider block text-center">
-            ⚡ 1-Click Test Sign In (Auto Firebase Register)
-          </span>
+      
           <div className="grid grid-cols-2 gap-1.5 text-[11px] font-bold">
-            <button
+            {/* <button
               onClick={() =>
                 handleQuickDemoLogin(
                   "superadmin@wildroute.lk",
@@ -129,15 +127,15 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
               className="p-2 bg-amber-600 hover:bg-amber-700 text-white rounded-xl flex items-center justify-center gap-1 transition"
             >
               <Crown className="w-3.5 h-3.5" /> SuperAdmin
-            </button>
-            <button
+            </button> */}
+            {/* <button
               onClick={() =>
                 handleQuickDemoLogin("admin@wildroute.lk", "Admin@123456")
               }
               className="p-2 bg-[#C86D51] hover:bg-[#B35B40] text-white rounded-xl flex items-center justify-center gap-1 transition"
             >
               <Shield className="w-3.5 h-3.5" /> Owner Admin
-            </button>
+            </button> */}
             <button
               onClick={() =>
                 handleQuickDemoLogin("staff@wildroute.lk", "Staff@123456")
@@ -218,10 +216,10 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                 <input
                   type="text"
                   required
-                  placeholder="Thiruna Samarasinghe"
+                  placeholder="John doe"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="form-field w-full pl-10 pr-4 py-2.5 bg-[#FAF8F5] border border-[#E5DFD5] rounded-xl text-sm focus:outline-none"
+                  className="form-field w-full pl-10 pr-4 py-2.5 text-black bg-[#FAF8F5] border border-[#E5DFD5] rounded-xl text-sm focus:outline-none"
                 />
               </div>
             </div>
@@ -239,7 +237,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                 placeholder="name@domain.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="form-field w-full pl-10 pr-4 py-2.5 bg-[#FAF8F5] border border-[#E5DFD5] rounded-xl text-sm focus:outline-none"
+                className="form-field w-full pl-10 pr-4 py-2.5 text-black bg-[#FAF8F5] border border-[#E5DFD5] rounded-xl text-sm focus:outline-none"
               />
             </div>
           </div>
@@ -253,10 +251,10 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
               <input
                 type="password"
                 required
-                placeholder="••••••••"
+                placeholder="*******"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="form-field w-full pl-10 pr-4 py-2.5 bg-[#FAF8F5] border border-[#E5DFD5] rounded-xl text-sm focus:outline-none"
+                className="form-field w-full pl-10 pr-4 py-2.5 text-black bg-[#FAF8F5] border border-[#E5DFD5] rounded-xl text-sm focus:outline-none"
               />
             </div>
           </div>

@@ -115,10 +115,10 @@ export default async function Home() {
             </div>
 
             {/* Card 3 */}
-            <div className="home-scroll-reveal isolate bg-white text-black p-8 flex flex-col justify-between min-h-[450px] relative">
+            <div className="home-scroll-reveal isolate bg-white text-white p-8 flex flex-col justify-between min-h-[450px] relative">
               <div className="hero-cinematic-mask absolute inset-0 z-0">
                 <Image
-                  src="https://images.unsplash.com/photo-1609681980718-340e7f4b11d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aW4lMjBzcmklMjBsYW5rYXxlbnwwfHwwfHx8MA%3D%3D"
+                  src="https://images.unsplash.com/photo-1543043204-3f4e66dc5c2b?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
                   alt="Rhino"
                   fill
                   className="hero-cinematic-img z-0 object-cover"
